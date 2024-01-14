@@ -2,55 +2,22 @@
 // ******************* PART 1 *******************
 // **********************************************
 // Create a variable called highScore that can be a number OR a boolean
-
-const highScore: number | boolean = 2;
-
-
+var highScore = 2;
 // **********************************************
 // ******************* PART 2 *******************
 // **********************************************
 // create an array called stuff
 // it can be an array of numbers OR an array of strings
 // it cannot be an array of numbers and strings (mixed together)
-
-const stuff: number[] | string[] = ["1"]
-
-// **********************************************
-// ******************* PART 3 *******************
-// **********************************************
-// Create a literal type called SkillLevel
-// There are 4 allowed values: "Beginner", "Intermediate", "Advanced", and "Expert"
-
-type SkillLevel = "Beginner" | "Intermediate" | "Advanced" | "Expert"
-const Beginner: SkillLevel = "Beginner";
-// console.log(Beginner);
-
-
-
-// **********************************************
-// ******************* PART 4 *******************
-// **********************************************
-// Create a type called SkiSchoolStudent
-// name must be a string
-// age must be a number
-// sport must be "ski" or "snowboard"
-// level must be a value from the SkillLevel type (from above)
-
-type SkiSchoolStudent = {
-    name: string;
-    age: number;
-    sport: "ski" | "snowboard",
-    level: SkillLevel
-}
-const Id1: SkiSchoolStudent = {
+var stuff = ["1"];
+var Beginner = "Beginner";
+var Id1 = {
     name: 'Paul',
     age: 1,
     sport: "ski",
     level: "Advanced"
-}
+};
 console.log(Id1);
-
-
 // **********************************************
 // ******************* PART 5 *******************
 // **********************************************
@@ -58,14 +25,11 @@ console.log(Id1);
 // r should be a number
 // g should be a number
 // b should be a number
-
 // Define a type to represent an HSL color
 // h should be a number
 // s should be a number
 // l should be a number
-
 // Create an array called colors that can hold a mixture of RGB and HSL color types
-
 // **********************************************
 // ******************* PART 6 *******************
 // **********************************************
