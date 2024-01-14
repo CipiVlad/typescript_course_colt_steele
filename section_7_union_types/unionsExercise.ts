@@ -3,7 +3,9 @@
 // **********************************************
 // Create a variable called highScore that can be a number OR a boolean
 
-const highScore: number | boolean = 2;
+let highScore: number | boolean;
+highScore = 1;
+highScore = true;
 
 
 // **********************************************
@@ -59,15 +61,49 @@ console.log(Id1);
 // g should be a number
 // b should be a number
 
+type RGBColor = {
+    r: number;
+    g: number;
+    b: number;
+}
+
 // Define a type to represent an HSL color
 // h should be a number
 // s should be a number
 // l should be a number
-
+type HSLColor = {
+    h: number;
+    s: number;
+    l: number;
+}
 // Create an array called colors that can hold a mixture of RGB and HSL color types
+const a: (RGBColor | HSLColor)[] = [{ r: 250, g: 200, b: 129 }]
+console.log(a);
+
+
 
 // **********************************************
 // ******************* PART 6 *******************
 // **********************************************
 // Write a function called greet that accepts a single string OR an array of strings
 // It should print "Hello, <name>" for that single person OR greet each person in the array with the same format
+
+
+function greet(name: string | string[]): void {
+
+    if (typeof name === "string") {
+        console.log(`Hello ${name}`);
+    }
+    else {
+        let txt: string = ""
+
+        for (let x of name) {
+            txt += `Hello ${x}, `
+        }
+        console.log(txt);
+    }
+}
+
+const greetMiri = greet('Miri')
+const greetGroup = greet(['Miri', 'Simon'])
+

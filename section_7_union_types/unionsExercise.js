@@ -2,7 +2,9 @@
 // ******************* PART 1 *******************
 // **********************************************
 // Create a variable called highScore that can be a number OR a boolean
-var highScore = 2;
+var highScore;
+highScore = 1;
+highScore = true;
 // **********************************************
 // ******************* PART 2 *******************
 // **********************************************
@@ -18,20 +20,26 @@ var Id1 = {
     level: "Advanced"
 };
 console.log(Id1);
-// **********************************************
-// ******************* PART 5 *******************
-// **********************************************
-// Define a type to represent an RGB color
-// r should be a number
-// g should be a number
-// b should be a number
-// Define a type to represent an HSL color
-// h should be a number
-// s should be a number
-// l should be a number
 // Create an array called colors that can hold a mixture of RGB and HSL color types
+var a = [{ r: 250, g: 200, b: 129 }];
+console.log(a);
 // **********************************************
 // ******************* PART 6 *******************
 // **********************************************
 // Write a function called greet that accepts a single string OR an array of strings
 // It should print "Hello, <name>" for that single person OR greet each person in the array with the same format
+function greet(name) {
+    if (typeof name === "string") {
+        console.log("Hello ".concat(name));
+    }
+    else {
+        var txt = "";
+        for (var _i = 0, name_1 = name; _i < name_1.length; _i++) {
+            var x = name_1[_i];
+            txt += "Hello ".concat(x, ", ");
+        }
+        console.log(txt);
+    }
+}
+var greetMiri = greet('Miri');
+var greetGroup = greet(['Miri', 'Simon']);
