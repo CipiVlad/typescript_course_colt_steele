@@ -23,7 +23,7 @@ console.log(isDelivered(OrderStatus.SHIPPED));
 
 enum ArrowKeys {
     UP = "up",
-    DOWN = "down"
+    DOWN = "down",
     LEFT = "left",
     RIGHT = "right"
 }
