@@ -53,7 +53,7 @@ function checkIfvalid(x:string | number,y:string|number){
 
 interface Movie{
 	title:string;
-	duration:
+	duration:number
 }
 
 interface TVShow{
@@ -76,9 +76,17 @@ function getRuntime(media: Movie | TVShow){
 
 
 
+// using js - "instanceof" for type narrowing
 
+function getDate(date: string | Date){
+	if(date instanceof Date){
+		console.log(date.toUTCString())
+	}else{
+		console.log(new Date(date).toUTCString())
+	}
+}
 
-
+// getDate("Mon, 19 Feb 2024 22:36:59")
 
 
 

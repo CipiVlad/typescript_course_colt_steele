@@ -40,3 +40,13 @@ function getRuntime(media) {
 //what is it: movie or tv show?
 // console.log(getRuntime({title:'Matrix', duration: 148}))
 // console.log(getRuntime({title:'Vikings', numEpisodes:8, episodesDuration:45}))
+// using js - "instanceof" for type narrowing
+function getDate(date) {
+    if (date instanceof Date) {
+        console.log(date.toUTCString());
+    }
+    else {
+        console.log(new Date(date).toUTCString());
+    }
+}
+// getDate("Mon, 19 Feb 2024 22:36:59")
